@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html笔记-01 入门基础</title>
+</head>
+<body>
+
+
+    <!-- 
+    1. 快速创建 HTML骨架
+    "!" + 回车     
+
+    2.注释
+    ctrl + /
+
+    3.换行
+    <br>
+
+    4.分隔线
+    <hr>
+
+    5.快速多选相同值
+    ctrl + d （通过多次按d次数，选中多个）
+
+    -->
+    <h1>1.快捷创建标签 直接输入标签字母+回车</h1>
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>
+    <h4>四级标题</h4>
+    <h5>五级标题</h5>
+    <h6>六级标题</h6>
+    <br>
+    <hr>
+
+    <p>2.段落标签</p>
+    <p>再别康桥 
+        <br> 轻轻的我走了，正如我轻轻的来；我轻轻的招手，作别西天的云彩。那河畔的金柳，是夕阳中的新娘；波光里的艳影，在我的心头荡漾。软泥上的青荇⑴，油油的在水底招摇⑵；在康河的柔波里，我甘心做一条水草！那榆荫下的一潭，不是清泉，是天上虹；揉碎在浮藻间，沉淀着彩虹似的梦。寻梦？撑一支长篙⑶，向青草更青处漫溯⑷；满载一船星辉，在星辉斑斓里放歌。但我不能放歌，悄悄是别离的笙箫；夏虫也为我沉默，沉默是今晚的康桥！悄悄的我走了，正如我悄悄的来；我挥一挥衣袖，不带走一片云彩。
+    </p>
+    <p> 再别康桥 
+        <br> 轻轻的我走了，正如我轻轻的来；我轻轻的招手，作别西天的云彩。那河畔的金柳，是夕阳中的新娘；波光里的艳影，在我的心头荡漾。软泥上的青荇⑴，油油的在水底招摇⑵；在康河的柔波里，我甘心做一条水草！那榆荫下的一潭，不是清泉，是天上虹；揉碎在浮藻间，沉淀着彩虹似的梦。寻梦？撑一支长篙⑶，向青草更青处漫溯⑷；满载一船星辉，在星辉斑斓里放歌。但我不能放歌，悄悄是别离的笙箫；夏虫也为我沉默，沉默是今晚的康桥！悄悄的我走了，正如我悄悄的来；我挥一挥衣袖，不带走一片云彩。
+    </p>
+
+    <hr>
+    <!-- 英文单词 处理 文本，可以强调内容 -->
+    <b>加粗</b>
+    <strong>加粗</strong>
+    <br>
+    <u>下划线</u>
+    <ins>下划线</ins>
+    <br>
+    <i>倾斜</i>
+    <em>倾斜</em>
+    <br>
+    <s>删除线</s>
+    <del>删除线</del>
+    <br><hr>
+
+    <h1>媒体标签-图片</h1>
+    <!-- 
+        src=文件地址  
+        alt=属性：如果图片加载失败，才显示的文本
+        title=鼠标悬停0.5秒提示文本
+        width和height ，只设置一个，另外一个自适应
+     -->
+    <img src="./baby.jpg" alt="这是一个小宝宝1" title="你点我啊"  width="400" >
+    <img src="baby.jpg" alt="这是一个小宝宝1" title="你点我啊"  height="400">
+
+    <br><hr>
+
+    <h1>3.媒体标签-音频</h1>
+    <!-- 
+        controls 显示音频播放控件
+        autoplay 自动播放，部分浏览器不支持自动播放(google不支持)
+        loop 循环播放
+        尽可能mp3格式，其他格式有的浏览器不支持
+
+     -->
+    <audio src="baby.m4a" controls autoplay loop></audio>
+
+    <br><hr>
+
+    <h1>4.媒体标签-视频</h1>
+    <!-- 
+        controls 显示音频播放控件
+        autoplay 自动播放，(google需配合muted实现静音播放)
+        loop 循环播放
+        尽可能mp3格式，其他格式有的浏览器不支持
+     -->
+     <video src="goodbaby.mp4" controls autoplay muted loop></video>
+
+     <br><hr>
+
+    <h1>5.链接标签</h1>
+    <!-- 
+        a 标签：超链接、锚链接
+        开发网站的初期，还不知道跳转地址的时候，href="#" （空链接）
+        target = _self   :默认原窗口
+        target = _blank  :打开新窗口
+     -->
+     <a href="https://www.baidu.com" target="_self">跳转到百度_self</a>
+     <br>
+     <a href="https://www.baidu.com" target="_blank">跳转到百度_blank</a>
+     <br>
+     <a href="baby.jpg">跳转到图片</a>
+     <br>
+     <a href="#">空链接，不知道跳到哪里</a>
+
+     <br>
+     <hr>
+     <h1>6.列表标签</h1>
+     <h4>无序列表</h4>
+     <!-- 
+        类别：有序、无序、自定义
+        ul : 无序列表整体，用于包含 li 标签，且只能包含 li 标签
+        ol ：有序列表整体，用于包含 li 标签，且只能包含 li 标签
+        dl : 自定义列表的整体，dt 标题，dd 内容，只允许写 dt 和 dd
+        li、dt、dd：允许放超链接等其他标签
+
+      -->
+      <ul>
+        <li>榴莲</li>
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>哈密瓜</li>
+      </ul>
+
+      <h4>有序列表</h4>
+      <ol>
+        <li>100</li>
+        <li>95</li>
+        <li>62</li>
+        <li>88</li>
+      </ol>
+
+      <h4>自定义列表</h4>
+      <dl>
+        <dt>帮助中心</dt>
+        <dd>技术文档</dd>
+        <dd>账户管理</dd>
+        <dd>视频教程</dd>
+      </dl>
+
+      <br>
+      <hr>
+      <h1>7.表格标签</h1>
+      <!-- 
+        table   :   表格整体，用于包含 tr
+        tr      :   行，用于包含 th、td
+        th      :   表头单元格
+        td      :   表格的单元格，用于包含 内容
+
+        caption ：  表格的标题
+        border  :   边框宽度
+        width   :   单元格宽度（一般在css中设置宽高）
+        height  :   单元格高度（一般在css中设置宽高）
+
+       -->
+       <h4>表格标签 - 主体</h4>
+       <table border="1" >
+        <caption><b>学生成绩</b></caption>
+        <tr>
+            <th>姓名</th>
+            <th>成绩</th>
+            <th>评语</th>
+        </tr>
+        <tr>
+            <td>小哥哥</td>
+            <td>100份</td>
+            <td>小哥哥真帅</td>
+        </tr>
+        <tr>
+            <td>小姐姐</td>
+            <td>100分</td>
+            <td>小姐姐真好看！！！！！</td>
+        </tr>
+       </table>
+
+       <h4>表格的结构标签</h4>
+       <!-- 
+        注意：结构化标签为了浏览器方便阅读
+        thead   :   头部，包含tr标签
+        tbody   ：  体部，包含tr标签
+        tfoot   ：  尾部，包含tr标签
+
+        -->
+       <table border="1" >
+        <caption><b>学生成绩1</b></caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>成绩</th>
+                <th>评语</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>小哥哥</td>
+                <td>100份</td>
+                <td>小哥哥真帅</td>
+            </tr>
+            <tr>
+                <td>小姐姐</td>
+                <td>100分</td>
+                <td>小姐姐真好看！！！！！</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>总结</td>
+                <td>郎才女貌</td>
+                <td>真棒，相亲成功！！！！</td>
+            </tr>
+        </tfoot>
+
+
+        <h4>合并单元格</h4>
+        <!-- 
+            上下合并    :   只保留最上，其他单元格删除
+            左右合并    ：  只保留最左，其他单元格删除
+            rowspan="2" 跨行合并，输入合并单元格个数
+            colspan="2" 跨列合并，输入合并单元格个数
+            不同结构不能合并(thead、tbody、tfoot)
+         -->
+         <table border="1" >
+            <caption><b>学生成绩1</b></caption>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>成绩</th>
+                    <th>评语</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>小哥哥</td>
+                    <td rowspan="2">100份</td>
+                    <td>小哥哥真帅</td>
+                </tr>
+                <tr>
+                    <td>小姐姐</td>
+
+                    <td>小姐姐真好看！！！！！</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>总结</td>
+                    <td colspan="2">郎才女貌</td>
+
+                </tr>
+            </tfoot>
+            <hr>
+
+
+
+    
+
+
+
+
+
+
+    
+</body>
+</html>
